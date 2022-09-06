@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -35,28 +35,36 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Press For Incriment And Dicriment'),
+        title: const Text('Counter App'),
       ),
       body:Center(
-        child: Row(
+        child: Column(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           
           children: [
+            
             Container(
-              height: 50,
-              width: 50,
-              color: Colors.red,
-              margin: EdgeInsets.all(20),
+              decoration:BoxDecoration(border:Border.all(color: Colors.black),borderRadius:BorderRadius.circular(10),
+            color: Colors.red),
+              height: 70,
+              width: 100,
+              
+              margin:const EdgeInsets.all(20),
+              
               child:TextButton(onPressed: (){
                 setState(() {
                   a +=1;
                   
                 });
               },
-              child:
+              
+              child:const
+              
               Text('+',
               style: TextStyle(color: Colors.black,fontSize: 19),
               textAlign: TextAlign.center,
+              
               ),
               )
               
@@ -66,21 +74,22 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 50,
               width: 50,
               //color: Colors.blue,
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               alignment: Alignment.center,
               
               child:
               Text(''+a.toString(),
-              style: TextStyle(color: Colors.black,fontSize: 19),
+              style:const TextStyle(color: Colors.black,fontSize: 19),
               textAlign: TextAlign.center,
               ),
               ),
             
            Container(
+            decoration:BoxDecoration(border:Border.all(color: Colors.black,),borderRadius:BorderRadius.circular(10),
+            color: Colors.blue),
               height: 50,
               width: 50,
-              color: Colors.blue,
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               child:TextButton(onPressed: (){
                 setState(() {
                   a -=1;
